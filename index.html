@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BigChange × Green Man Environmental — Commercial Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bc-dark:#0A2240;--bc-blue:#0072CE;--bc-green:#28E289;--bc-orange:#FF6B00;
+  --bc-cyan:#00C2CB;--bc-white:#fff;--bc-gray-50:#f7f9fc;--bc-gray-100:#eef1f6;
+  --bc-gray-200:#d8dce8;--bc-gray-400:#9298b0;--bc-gray-600:#5c6180;
+  --bc-gray-800:#2d3250;--bc-radius:14px;
+  --bc-shadow:0 4px 24px rgba(0,0,0,.06);--bc-shadow-lg:0 12px 48px rgba(0,0,0,.12)
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bc-gray-50);color:var(--bc-gray-800);line-height:1.65;-webkit-font-smoothing:antialiased}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--bc-gray-100);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.nav-inner{max-width:1160px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:28px}
+.nav-links{display:flex;gap:14px}
+.nav-links a{font-size:11.5px;font-weight:600;color:var(--bc-gray-600);text-decoration:none;white-space:nowrap;transition:color .2s}
+.nav-links a:hover{color:var(--bc-blue)}
+
+.hero{position:relative;min-height:580px;background:linear-gradient(140deg,#061828 0%,#0A2240 40%,#0a3668 75%,#0c4a8a 100%);display:flex;align-items:center;justify-content:center;padding:150px 32px 90px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 90%,rgba(40,226,137,.12) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(0,194,203,.1) 0%,transparent 50%),radial-gradient(ellipse at 50% 50%,rgba(0,114,206,.08) 0%,transparent 70%)}
+.hero-grid{position:absolute;inset:0;opacity:.025;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:52px 52px}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.hero-orb-1{width:500px;height:500px;background:rgba(40,226,137,.06);top:-100px;right:-100px}
+.hero-orb-2{width:400px;height:400px;background:rgba(0,114,206,.08);bottom:-80px;left:-80px}
+.hero-content{position:relative;z-index:2;max-width:880px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(40,226,137,.1);border:1px solid rgba(40,226,137,.22);border-radius:50px;padding:6px 20px;font-size:11.5px;font-weight:700;color:var(--bc-green);letter-spacing:.07em;text-transform:uppercase;margin-bottom:32px;animation:fadeInDown .6s ease-out}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--bc-green);animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,4.8vw,56px);font-weight:400;color:var(--bc-white);line-height:1.1;margin-bottom:22px;animation:fadeInUp .7s ease-out .1s both}
+.hero h1 span{background:linear-gradient(135deg,var(--bc-green) 0%,var(--bc-cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:17px;color:rgba(255,255,255,.55);max-width:680px;margin:0 auto 40px;line-height:1.7;animation:fadeInUp .7s ease-out .25s both}
+.hero-stat-row{display:flex;justify-content:center;gap:0;animation:fadeInUp .7s ease-out .4s both;flex-wrap:wrap;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;max-width:580px;margin:0 auto}
+.hero-stat{flex:1;padding:18px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+.hero-stat:last-child{border-right:none}
+.hero-stat .num{font-size:26px;font-weight:800;color:var(--bc-white)}
+.hero-stat .num em{font-style:normal;background:linear-gradient(135deg,var(--bc-green),var(--bc-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-stat .lbl{font-size:10.5px;font-weight:500;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+
+.section{max-width:1160px;margin:0 auto;padding:64px 32px}
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--bc-blue);margin-bottom:12px}
+.section-tag::before{content:'';width:20px;height:2px;background:linear-gradient(90deg,var(--bc-blue),var(--bc-green));border-radius:2px}
+.section h2{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);font-weight:400;color:var(--bc-dark);line-height:1.18;margin-bottom:16px}
+.section .subtitle{font-size:16px;color:var(--bc-gray-600);max-width:720px;margin-bottom:48px;line-height:1.7}
+
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--bc-white);border-radius:var(--bc-radius);padding:28px;border:1px solid var(--bc-gray-100);box-shadow:var(--bc-shadow);transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px);box-shadow:var(--bc-shadow-lg);border-color:rgba(0,114,206,.12)}
+.card-icon{font-size:22px;margin-bottom:14px}
+.card h3{font-size:14.5px;font-weight:700;color:var(--bc-dark);margin-bottom:9px;line-height:1.35}
+.card p{font-size:13px;color:var(--bc-gray-600);line-height:1.65;flex:1}
+
+.system-card2{background:var(--bc-gray-50);border:1px solid var(--bc-gray-100);border-radius:var(--bc-radius);padding:22px}
+.system-card2 p{font-size:13px;color:var(--bc-gray-800);line-height:1.65;margin-top:10px}
+.s-pill{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.s-pill-out{background:#fff3f3;color:#b91c1c;border:1px solid #fca5a5}
+.s-pill-notneeded{background:var(--bc-gray-100);color:var(--bc-gray-600);border:1px solid var(--bc-gray-200)}
+.s-pill-replace{background:rgba(40,226,137,.1);color:#1a8a5a;border:1px solid rgba(40,226,137,.3)}
+.s-title{font-size:14px;font-weight:700;color:var(--bc-dark)}
+.system-in{border-radius:12px;padding:20px 22px;background:rgba(40,226,137,.05);border:1px solid rgba(40,226,137,.2)}
+.system-in .s-label{font-size:10px;font-weight:700;color:#1a8a5a;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+.system-in p{font-size:13px;color:var(--bc-gray-800);line-height:1.65}
+
+.check{display:flex;align-items:start;gap:10px;font-size:13px;color:var(--bc-gray-800);line-height:1.55}
+.check .tick{color:var(--bc-green);font-weight:700;flex-shrink:0;margin-top:1px}
+
+.ftab{padding:9px 16px;border-radius:8px;border:1px solid var(--bc-gray-200);background:var(--bc-white);font-size:12.5px;font-weight:600;color:var(--bc-gray-600);cursor:pointer;transition:all .2s;font-family:'Plus Jakarta Sans',sans-serif}
+.ftab:hover{border-color:var(--bc-blue);color:var(--bc-blue)}
+.ftab.active{background:var(--bc-blue);color:#fff;border-color:var(--bc-blue)}
+.feature-panel{background:var(--bc-white);border-radius:var(--bc-radius);padding:28px 32px;border:1px solid var(--bc-gray-100);box-shadow:var(--bc-shadow)}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+.ba-card{border-radius:var(--bc-radius);padding:28px;border:1px solid}
+.ba-bad{background:#fff3f3;border-color:#fca5a5}
+.ba-bad .ba-tag{color:#b91c1c}
+.ba-bad p{color:#7f1d1d}
+.ba-good{background:rgba(40,226,137,.05);border-color:rgba(40,226,137,.2)}
+.ba-good .ba-tag{color:#1a8a5a}
+.ba-good p{color:var(--bc-gray-800)}
+.ba-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.ba-card p{font-size:13px;line-height:1.7;margin-bottom:8px}
+
+.price-box-dark{background:linear-gradient(135deg,var(--bc-dark),#0d2952);border-radius:var(--bc-radius);padding:32px}
+.price-box-main{background:var(--bc-white);border-radius:var(--bc-radius);border:2px solid var(--bc-blue);box-shadow:var(--bc-shadow-lg);overflow:hidden;display:flex;flex-direction:column}
+
+.step-card{background:var(--bc-white);border-radius:var(--bc-radius);border:1px solid var(--bc-gray-100);box-shadow:var(--bc-shadow);padding:26px}
+.step-card.active-step{border-color:var(--bc-blue);border-width:2px;box-shadow:var(--bc-shadow-lg)}
+.step-num{font-size:11px;font-weight:700;color:var(--bc-blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.step-title{font-size:16px;font-weight:700;color:var(--bc-dark);margin-bottom:8px}
+.step-body{font-size:13px;color:var(--bc-gray-600);line-height:1.65}
+
+.contact-section{background:linear-gradient(135deg,var(--bc-dark),#0d2952);border-radius:var(--bc-radius);padding:48px;display:flex;align-items:center;gap:40px;color:#fff}
+.contact-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--bc-blue),var(--bc-green));display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.5px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+.case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.case-card{background:var(--bc-white);border-radius:var(--bc-radius);overflow:hidden;border:1px solid var(--bc-gray-100);box-shadow:var(--bc-shadow);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.case-card:hover{transform:translateY(-4px);box-shadow:var(--bc-shadow-lg)}
+.case-thumb{width:100%;height:170px;overflow:hidden;background:var(--bc-dark);position:relative}
+.case-thumb img{width:100%;height:100%;object-fit:cover}
+.case-body{padding:22px;flex:1}
+.case-body .sector{font-size:10.5px;font-weight:700;color:var(--bc-blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.case-body h4{font-size:15px;font-weight:700;color:var(--bc-dark);margin-bottom:8px}
+.case-body p{font-size:13px;color:var(--bc-gray-600);line-height:1.55}
+.case-body .read-more{margin-top:12px;font-size:12px;font-weight:600;color:var(--bc-blue)}
+.footer{text-align:center;padding:48px 32px;font-size:12px;color:var(--bc-gray-400)}
+
+@media(max-width:800px){
+  .nav-links{display:none}
+  .hero{padding:120px 20px 60px}
+  .section{padding:48px 20px}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
+  .contact-section{flex-direction:column;text-align:center;padding:36px 20px}
+  .feature-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="https://www.martinport.com/wp-content/uploads/2022/05/bigchange-logo.webp" alt="BigChange"/></div>
+    <div class="nav-links">
+      <a href="#summary">Why BigChange</a>
+      <a href="#systems">Consolidation</a>
+      <a href="#features">Features</a>
+      <a href="#implementation">Implementation</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://landing.bigchange.com/fJT3jrmV8Yy" target="_blank" rel="noreferrer" style="color:var(--bc-blue);font-weight:700;">Your Quote</a>
+      <a href="#next">Next Steps</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Proposal · Green Man Environmental</div>
+    <h1>One system that grows with you.<br><span>Not one you'll be replacing again.</span></h1>
+    <p>Clik has served you well for years, but it's server-based, slowing down, and Joblogic's own migration timeline is uncertain. BigChange gives you a single, cloud-based platform for reactive and project work, engineers and back office, vehicle tracking and Sage 50 — properly two-way, fully customisable, and built so you never have to go through this switch again.</p>
+    <div class="hero-stat-row">
+      <div class="hero-stat">
+        <div class="num"><em>34</em></div>
+        <div class="lbl">19 field + 15 office users</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num"><em>2→1</em></div>
+        <div class="lbl">Clik + separate tracking, one platform</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num"><em>24/7</em></div>
+        <div class="lbl">UK-based support, Leeds</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="summary">
+  <div class="reveal">
+    <div class="section-tag">Why BigChange</div>
+    <h2>You're not just replacing Clik. You're deciding what you never have to replace again.</h2>
+    <p class="subtitle">Clik has been moulded around exactly how Green Man works — that's exactly why it's hard to leave. But it's ageing, it's server-based, and Joblogic's "2027 switch-off" claim doesn't match what Clik themselves are telling you (roughly 20% of customers migrated so far). Whatever the real timeline, a server upgrade is already due, and a cloud-based platform that grows with the business — rather than something you'll be evaluating again in three years — is the safer long-term call.</p>
+  </div>
+
+  <div class="grid-4">
+    <div class="card reveal">
+      <div class="card-icon">🖥️</div>
+      <h3>Cloud-based, not server-based</h3>
+      <p>Login and password, anywhere in the world, on your own unique details — no dedicated server ageing in the background, no "is it going to work when I get in tomorrow" risk that's currently keeping you up at night.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🛠️</div>
+      <h3>Fully customisable — not "get what you're given"</h3>
+      <p>Joblogic is fixed unless you pay a lot more to change it. BigChange is built off the shelf but configured around you — job types, workflows, emails, forms and drop-downs are all yours to shape, both at implementation and afterwards.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🧾</div>
+      <h3>Domestic reverse charge, handled automatically</h3>
+      <p>Set the VAT scheme once at contact level, and it filters down through child accounts. BigChange knows which customers are DRC and adjusts the invoice accordingly — no manual double-checking on every invoice raised.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">📡</div>
+      <h3>Vehicle tracking, natively included</h3>
+      <p>Your tracking sits outside Clik today and doesn't talk to it. In BigChange it's built in — free of charge, trackers installed free — feeding ETAs, live traffic-aware scheduling, cost-to-serve, and reconciliation against timesheets and job costings.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🔁</div>
+      <h3>Sage 50 — proper two-way sync</h3>
+      <p>Clik only sends data to Sage one way. BigChange talks to Sage 50 both ways, so anything raised in BigChange updates Sage and vice versa — no manual reconciliation between the two.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">🧑‍🔧</div>
+      <h3>One system for reactive and project work</h3>
+      <p>Your workload is split between reactive call-outs and longer install projects — BigChange's scheduling assistant, SLAs and P1–P4 prioritisation handle the reactive side, while jobs, quotes and purchase orders scale to project work too.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">⏱️</div>
+      <h3>Timesheets built from job events — the way you already like it</h3>
+      <p>You told us you prefer timesheets built automatically from the jobs engineers book time to, rather than a separate clock in/out step, because it forces the hours to tie to real work. BigChange can report off job events exactly the same way — or timesheet events, whichever fits.</p>
+    </div>
+    <div class="card reveal">
+      <div class="card-icon">📞</div>
+      <h3>24/7 UK-based support — not an offshore queue</h3>
+      <p>All support and implementation is based in Leeds, not offshore. Direct line for the office, and engineers get one tap through to the same team from their app.</p>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:28px;background:linear-gradient(135deg,var(--bc-dark),#0d2952);border-radius:var(--bc-radius);padding:32px;">
+    <div style="font-size:11px;font-weight:700;color:var(--bc-green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">Built for how Green Man works</div>
+    <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff;margin-bottom:16px;">A dozen or more jobs per engineer a day, reactive call-outs landing hourly — that is the work BigChange is designed around.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+      <div style="font-size:13px;color:rgba(255,255,255,.75);">✓ Reactive dispatch at speed — drag and drop, skills and distance matching, true cost to send each engineer</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.75);">✓ Vehicle tracking built in, powering ETAs, travel time and customer alerts</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.75);">✓ One app for engineers — jobs, worksheets, assets and photos in the same place</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.75);">✓ All 13 items on your requirements list answered Yes — including F-Gas, domestic reverse charge and asset-specific check sheets</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.75);">✓ Backed by Simpro Group — shared investment in AI such as JustAsk, with more to come</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bc-white);padding:0;">
+  <div class="section" id="systems">
+    <div class="reveal">
+      <div class="section-tag">Consolidation</div>
+      <h2>Clik and your separate vehicle tracking, replaced by one platform.</h2>
+      <p class="subtitle">Two systems that don't talk to each other today become one that does — with the CRM depth, DRC handling and customisation Clik and Joblogic can't offer between them.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch;" class="reveal">
+      <div class="system-card2">
+        <div class="s-pill s-pill-replace">Full replace</div>
+        <div class="s-title">Clik</div>
+        <p>CRM, scheduling, quoting, invoicing, stock and job history all move across — onto a cloud platform rather than the ageing server Clik currently runs on.</p>
+      </div>
+      <div class="system-card2">
+        <div class="s-pill s-pill-replace">Brought in, free of charge</div>
+        <div class="s-title">Vehicle tracking</div>
+        <p>Currently a standalone system with no connection to Clik. BigChange includes tracking natively — no separate subscription, no separate login, free installation of the hardware.</p>
+      </div>
+      <div class="system-card2">
+        <div class="s-pill s-pill-replace">Two-way, not one-way</div>
+        <div class="s-title">Sage 50</div>
+        <p>Clik only pushes data to Sage. BigChange syncs both directions, so invoicing and job costs stay in step without manual reconciliation.</p>
+      </div>
+      <div class="system-in" style="grid-column:span 3;">
+        <div class="s-label">✓ BigChange — one platform</div>
+        <p>CRM with parent contacts, geofencing and custom fields → scheduling with SLAs, P1–P4 prioritisation and a cost-to-serve scheduling assistant → quotes, purchase orders and stock → engineer app with offline mode, forced workflows and speech-to-text reporting → vehicle tracking natively built in → two-way Sage 50 sync → one 24/7 UK-based support team. Asset register with barcode/QR scanning and SFG worksheets → JustAsk AI reporting. One system for 34 office and field users, growing with the business rather than being outgrown by it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="reveal">
+    <div class="section-tag">The Detail</div>
+    <h2>The flow Matthew and Roger walked through on the demo.</h2>
+    <p class="subtitle">A high-level, start-to-finish look — not everything shown will be relevant to your exact workflows, and that's exactly what implementation is for.</p>
+  </div>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;" class="reveal">
+    <button class="ftab active" onclick="showTab('t-crm',this)">🗂️ CRM & Sites</button>
+    <button class="ftab" onclick="showTab('t-sched',this)">📅 Scheduling & Dispatch</button>
+    <button class="ftab" onclick="showTab('t-fin',this)">🧾 Quoting & Financials</button>
+    <button class="ftab" onclick="showTab('t-app',this)">📱 Engineer App</button>
+    <button class="ftab" onclick="showTab('t-asset',this)">🏷️ Assets & SFG Worksheets</button>
+    <button class="ftab" onclick="showTab('t-rep',this)">📊 Reporting & JustAsk</button>
+    <button class="ftab" onclick="showTab('t-time',this)">⏱️ Timesheets & Tracking</button>
+    <button class="ftab" onclick="showTab('t-fgas',this)">❄️ F-Gas & Certificates</button>
+    <button class="ftab" onclick="showTab('t-req',this)">✅ Your Requirements</button>
+  </div>
+
+  <div id="t-crm" class="feature-panel reveal">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">CRM & Sites — a deeper system behind the jobs</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Dynamic search by name, postcode or site — type LS15 and every relevant site on that postcode comes up</span></div>
+      <div class="check"><span class="tick">✓</span><span>Parent contacts — sites grouped under a managing contact (e.g. JLL), invoiced centrally with job history split out by site</span></div>
+      <div class="check"><span class="tick">✓</span><span>Access hours per site, feeding the schedule automatically so work only gets booked when the site can actually be accessed</span></div>
+      <div class="check"><span class="tick">✓</span><span>Extra info on the engineer's device — gate codes, parking, anything they need to know before they arrive</span></div>
+      <div class="check"><span class="tick">✓</span><span>Geofencing with what3words — SatNav directs engineers to the exact point on a site, not just the general postcode</span></div>
+      <div class="check"><span class="tick">✓</span><span>Permissions and restrictions — control exactly what engineers and back office staff can see or edit, financials included</span></div>
+      <div class="check"><span class="tick">✓</span><span>SLAs per client — e.g. P1 jobs must complete within 24 hours — flags automatically to the scheduling team</span></div>
+      <div class="check"><span class="tick">✓</span><span>Optional client booking portal — customers log in, request work, see upcoming jobs, and receive job cards and invoices automatically</span></div>
+    </div>
+  </div>
+
+  <div id="t-sched" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Scheduling & Dispatch — built for the reactive/project split you run</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Daily, weekly, monthly and list views, colour-coded by live job status — office sees on-route, on-site and completed in real time</span></div>
+      <div class="check"><span class="tick">✓</span><span>Drag-and-drop scheduling — move any job between engineers exactly like you do in Clik today</span></div>
+      <div class="check"><span class="tick">✓</span><span>Unallocated job buckets — split by job type (reactive call-outs, PPM, install/project work) so nothing sits unassigned by accident</span></div>
+      <div class="check"><span class="tick">✓</span><span>Travel-time alerts using live Google traffic — flags when two jobs are booked too close together for an engineer to realistically make both</span></div>
+      <div class="check"><span class="tick">✓</span><span>Skills matching — booking the wrong-skilled engineer to a job flags to the scheduling team before it becomes a wasted visit</span></div>
+      <div class="check"><span class="tick">✓</span><span>AI scheduling assistant — for a reactive job, recommends the engineer by skill match, distance and true cost to serve, not just who's free</span></div>
+      <div class="check"><span class="tick">✓</span><span>ETA alerts to customers — Amazon/DPD-style, using live traffic conditions</span></div>
+      <div class="check"><span class="tick">✓</span><span>Holiday and absence requests through the app, automatically blocking the schedule so no work gets allocated on an approved day off</span></div>
+      <div class="check"><span class="tick">✓</span><span>Route optimisation — select a day’s jobs and one click re-orders them into the most efficient route from the engineer’s start to finish point, showing miles, hours and fuel saved</span></div>
+      <div class="check"><span class="tick">✓</span><span>A scheduled start date and time can be set even before an engineer is assigned — so nothing sits in the diary without a target date</span></div>
+    </div>
+  </div>
+
+  <div id="t-fin" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Quoting & Financials — customisable, two-way with Sage</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Rates and price lists imported directly from Clik — not re-keyed by hand (data import is included in your support package)</span></div>
+      <div class="check"><span class="tick">✓</span><span>Client-specific rates and price lists — first-hour-included, mileage-only, fixed price per job type, however each contract is structured today</span></div>
+      <div class="check"><span class="tick">✓</span><span>Sets for common jobs (e.g. a boiler install) — pulls through the standard parts and materials and shows your margin live, adjustable in one clik</span></div>
+      <div class="check"><span class="tick">✓</span><span>Quote templates, fully branded — simple for small jobs, multi-page with cross-sell content for bigger ones, built from your own template in onboarding</span></div>
+      <div class="check"><span class="tick">✓</span><span>Digital acceptance link with T&Cs, time-stamped the moment the customer signs — automatically raises the job from the accepted quote</span></div>
+      <div class="check"><span class="tick">✓</span><span>Automatic quote chasing — no more manually pulling a 30-day-overdue report; BigChange emails the customer from your own address on your own schedule</span></div>
+      <div class="check"><span class="tick">✓</span><span>Domestic reverse charge VAT — set at contact level, correct invoice treatment applied automatically, filtering down through child accounts</span></div>
+      <div class="check"><span class="tick">✓</span><span>Two-way Sage 50 link (a platinum integration) — included, with purchasing and purchase invoices too</span></div>
+      <div class="check"><span class="tick">✓</span><span>Purchase invoices scanned in against the purchase order — one at a time or in bulk</span></div>
+      <div class="check"><span class="tick">✓</span><span>Sets for repeat installs — e.g. one “MT160” set pulls through the compressor plus the 20 or 30 associated items, with quantities, in a single click</span></div>
+      <div class="check"><span class="tick">✓</span><span>Supplier price lists imported in bulk from a spreadsheet when prices change — a manual import, not a live feed from the supplier</span></div>
+      <div class="check"><span class="tick">✓</span><span>Expenses raised in the app with a forced photo of the receipt, approved in the office, then raised as a financial line against the job and passed through to Sage</span></div>
+    </div>
+  </div>
+
+  <div id="t-app" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Engineer App — works on the phones your team already carry</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Runs on Android or iOS on engineers' own phones — no requirement to roll out tablets, though rugged tablets and van cradles are available if wanted</span></div>
+      <div class="check"><span class="tick">✓</span><span>Fully offline capable — hard-to-reach sites are fine, everything syncs the moment signal returns</span></div>
+      <div class="check"><span class="tick">✓</span><span>Forced workflows — clock in, 7-day vehicle checks, on-site risk assessment, mandatory job report fields — configured to keep the business compliant</span></div>
+      <div class="check"><span class="tick">✓</span><span>Speech-to-text on every report field, plus an AI "improve" pass to tidy grammar before anything reaches a customer</span></div>
+      <div class="check"><span class="tick">✓</span><span>Photo evidence, time/date/location stamped and annotatable — full audit trail for insurance and compliance</span></div>
+      <div class="check"><span class="tick">✓</span><span>Dynamic or template-based risk assessments — reactive jobs can be built with nearest-hospital and access information pre-populated for the engineer</span></div>
+      <div class="check"><span class="tick">✓</span><span>No-touch customer signing via QR code, or in-app signature — either way, timestamped and evidenced</span></div>
+      <div class="check"><span class="tick">✓</span><span>Van stock by barcode/QR scan, reorder alerts when stock drops below threshold, and visibility of nearby engineers' van stock</span></div>
+    </div>
+  </div>
+
+  <div id="t-asset" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Assets & SFG Worksheets — one tick sheet per asset, one app</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Barcode or QR scanning — any code you can generate or etch on, whether it carries client, site and asset number, is scanned in the field and pulls up that asset and its full service history</span></div>
+      <div class="check"><span class="tick">✓</span><span>Asset register built into each site — make, model, serial number, install date, custom fields (e.g. location in building) and every job ever done against it</span></div>
+      <div class="check"><span class="tick">✓</span><span>Worksheets tied to make and model — set the starting worksheet once (e.g. the SFG checklist for that equipment) and every new asset of that type lands on it automatically</span></div>
+      <div class="check"><span class="tick">✓</span><span>Conditional branching — a fail answer, or a fault code, takes the engineer to a different worksheet, with multiple worksheets per job where needed</span></div>
+      <div class="check"><span class="tick">✓</span><span>Pass/fail checks and detailed task lists in the same app — plus free text, speech-to-text and the AI "improve" button, so it stays simple on site</span></div>
+      <div class="check"><span class="tick">✓</span><span>Engineers can add assets as they find them on site; the office then attaches the worksheet to any new make and model (up to 15 minutes to reach the tablets)</span></div>
+      <div class="check"><span class="tick">✓</span><span>Printable service records and certificates — templates built in Word with keywords (like a mail merge), one template per output, sent to the customer automatically on job completion</span></div>
+      <div class="check"><span class="tick">✓</span><span>Built for volume — pre-load a planned job with every asset on site in a couple of clicks, whether that is 50 assets or hundreds</span></div>
+      <div class="check"><span class="tick">✓</span><span>Several assets, each with its own tick sheet, on a single job — the engineer taps an asset and lands on the right checklist</span></div>
+      <div class="check"><span class="tick">✓</span><span>Engineers can see an asset’s full history on site, even if they did not attend the last visit, plus an AI “job ready” summary of previous visits</span></div>
+      <div class="check"><span class="tick">✓</span><span>Manuals and documents (such as O&amp;M manuals) held against the site, in the engineer’s file library, or linked from the worksheet — there when needed</span></div>
+      <div class="check"><span class="tick">✓</span><span>Your existing tablets are likely to work — the app has run on rugged tablets up to ten years old</span></div>
+    </div>
+  </div>
+
+  <div id="t-rep" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Reporting & JustAsk — answers, not exports</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>JustAsk AI — ask questions of your own data in plain English ("most profitable customers, last 12 months") and get the answer straight away, with the working shown</span></div>
+      <div class="check"><span class="tick">✓</span><span>Departmental P&L — set mechanical, electrical and controls as resource groups, then report on one department or the whole business</span></div>
+      <div class="check"><span class="tick">✓</span><span>Export to CSV or Excel from any table, and filter by date, customer, job type or engineer</span></div>
+      <div class="check"><span class="tick">✓</span><span>Build your own dashboards by describing them — no coding degree or Power BI needed — then have them emailed on a schedule, such as the first of every month</span></div>
+      <div class="check"><span class="tick">✓</span><span>External reporting — send customers a monthly SLA dashboard (e.g. P1 jobs against the agreed response time) straight from the system</span></div>
+      <div class="check"><span class="tick">✓</span><span>Office wall-screen views — live vehicle map and daily schedule on one screen, plus KPI dashboards (dashboard data refreshes roughly every three hours)</span></div>
+      <div class="check"><span class="tick">✓</span><span>Automated document sending — certificates and job documents go to the customer on completion, copied to an internal mailbox with a subject you define, so any certificate can be re-sent quickly</span></div>
+      <div class="check"><span class="tick">✓</span><span>Included in your price — JustAsk and the Lightning AI features you have seen are part of the package, with no add-on</span></div>
+    </div>
+  </div>
+
+  <div id="t-time" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Timesheets & Tracking — true time, door to door</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Timesheets driven by standard and special working hours, with overtime rules (e.g. double time after 6pm) built to your pay structure</span></div>
+      <div class="check"><span class="tick">✓</span><span>Unfinished timesheets flagged in red, so you chase the day after, not at payroll</span></div>
+      <div class="check"><span class="tick">✓</span><span>Travel built from vehicle tracking — journey start, arrival and finish alongside job time, rather than reconciling tracker against timesheet by hand</span></div>
+      <div class="check"><span class="tick">✓</span><span>Excel export for payroll — Roger is sending an anonymised example week with real data so you can see exactly how it presents</span></div>
+      <div class="check"><span class="tick">✓</span><span>Weekly and daily movement reports for planned work — engineer name, vehicle reg and arrival times — built as a custom report and exportable to Excel</span></div>
+      <div class="check"><span class="tick">✓</span><span>Vehicle tracking for all 19 field engineers is included, with installation free, so every job gets a true cost per vehicle as well as per engineer</span></div>
+      <div class="check"><span class="tick">✓</span><span>Existing tracker contract? Run it out and switch when it ends — nothing in your timeline is blocked</span></div>
+      <div class="check"><span class="tick">✓</span><span>Customer ETA alerts, booking confirmations and optional live tracking links from the same tracking data</span></div>
+    </div>
+  </div>
+  <div id="t-fgas" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">F-Gas & Certificates — non-negotiable, and covered</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span>Gas type, quantity loaded or removed, and cylinder number captured on the job worksheet, recorded against the individual piece of equipment and the site</span></div>
+      <div class="check"><span class="tick">✓</span><span>Leaked, added and reclaimed amounts recorded with the right worksheet questions, so the annual report comes from data your engineers already capture</span></div>
+      <div class="check"><span class="tick">✓</span><span>JustAsk reports over any date range — trace a cylinder back years, not just three months</span></div>
+      <div class="check"><span class="tick">✓</span><span>Refrigerant movement certificate built to your own template and issued to the customer on completion</span></div>
+      <div class="check"><span class="tick">✓</span><span>Conditional branching — a fault code or a fail answer takes the engineer to the right worksheet, such as disposal, automatically</span></div>
+      <div class="check"><span class="tick">✓</span><span>Seen on the demo, and Roger is happy to run a live F-Gas report on your own worksheet data</span></div>
+    </div>
+  </div>
+
+  <div id="t-req" class="feature-panel reveal" style="display:none;">
+    <div style="font-size:14px;font-weight:700;color:var(--bc-dark);margin-bottom:16px;">Your requirements list — 13 of 13 answered Yes</div>
+    <div class="feature-grid">
+      <div class="check"><span class="tick">✓</span><span><strong>1. Easy changes to job and quote fields</strong> — categories, fault codes and statuses, with job flags visible in several views</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>2. Regional helpdesk allocation</strong> — allocate jobs by North, South, East or West, and report or filter by region</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>3. Job-specific responsible manager</strong> — a separate field for reporting, quote chasing and responsibility, not tied to engineer allocation</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>4. Custom user fields</strong> — Billing Review, Helpdesk and Mitigation notes, sortable, filterable and reportable, including in JustAsk</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>5. Site alerts</strong> — other open jobs at the same site shown on screen</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>6. Parts and picklists</strong> — warehouse picklists and part statuses such as Received, Site Delivery, Stock Item and Already Fitted</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>7. Domestic reverse charge</strong> — driven by the VAT code on the item, with DRC VAT shown on the invoice</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>8. F-Gas recording</strong> — refrigerant type, quantity, leaked, added and reclaimed by equipment and site, with annual reporting through JustAsk</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>9. Engineer movements</strong> — by day or week through timesheet, journey and discrepancy reports, with JustAsk for anything else</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>10. Automatic escalation</strong> — P1 emergency workflow, required actions and a completion email to managers, using alerts</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>11. Simple timesheets</strong> — plus a download of jobs by labour, materials, cost price and quote price</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>12. Estimated start dates and times</strong> — set before an engineer is assigned</span></div>
+      <div class="check"><span class="tick">✓</span><span><strong>13. Asset-specific check sheets</strong> — multiple assets with multiple tick sheets on a single job, as shown on the demo</span></div>
+    </div>
+  </div>
+
+</section>
+
+<section style="background:var(--bc-white);padding:0;">
+  <div class="section">
+    <div class="reveal">
+      <div class="section-tag">The Real Difference</div>
+      <h2>Same reactive job. Very different system underneath it.</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="ba-card ba-bad">
+        <div class="ba-tag">❌ Clik + separate tracking today</div>
+        <p>Server-based system, getting slower, due a server upgrade.</p>
+        <p>Vehicle tracking sits outside Clik entirely — no connection, under-used because engineers don't know how to access it.</p>
+        <p>Sage sync is one-way — anything changed in Sage has to be re-keyed back into Clik.</p>
+        <p>DRC customers handled manually on every invoice — no automatic scheme detection.</p>
+        <p>Fixed system, no real customisation without significant extra cost.</p>
+      </div>
+      <div class="ba-card ba-good">
+        <div class="ba-tag">✓ BigChange</div>
+        <p>Cloud-based — login and password anywhere, no ageing server to maintain.</p>
+        <p>Vehicle tracking built in natively, free of charge, feeding ETAs, scheduling and true job costings automatically.</p>
+        <p>Sage 50 — full two-way sync, no manual reconciliation.</p>
+        <p>DRC VAT scheme set once at contact level, applied automatically on every invoice.</p>
+        <p>Fully customisable job types, workflows, forms and drop-downs — built with you, editable by you afterwards, no coding degree required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="implementation">
+  <div class="reveal">
+    <div class="section-tag">Implementation & Support</div>
+    <h2>A guided rollout, not "here's your login, off you go."</h2>
+    <p class="subtitle">You've seen what happened with Clik — years to actually get full value from it. This is different: a 50/50 approach, where you bring the knowledge of how Green Man works and we build the system and teach you to run it. Expect around three to six months to settle in, with a dedicated consultant beside you, and an hour or two a week from you at the start — the more time you can give early on, the faster you are live. Your consultant builds your first SFG worksheets, then trains you as they go, so in six months you can edit them yourselves.</p>
+  </div>
+
+  <div class="grid-2 reveal" style="margin-bottom:32px;">
+    <div style="background:#fff3f3;border-radius:var(--bc-radius);padding:28px;border:1px solid #fca5a5;">
+      <div style="font-size:12px;font-weight:700;color:#b91c1c;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">❌ What you've told us worries you about switching</div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div style="font-size:13px;color:#7f1d1d;">A big, scary change for the whole office — new ways of doing everything, all at once.</div>
+        <div style="font-size:13px;color:#7f1d1d;">Being handed a system and left to work it out, the way it happened with Clik years ago.</div>
+        <div style="font-size:13px;color:#7f1d1d;">Not knowing where specific things — like domestic reverse charge, or job-specific forms — actually live in a new system.</div>
+      </div>
+    </div>
+    <div style="background:rgba(40,226,137,.05);border-radius:var(--bc-radius);padding:28px;border:1px solid rgba(40,226,137,.2);">
+      <div style="font-size:12px;font-weight:700;color:#1a8a5a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;">✓ BigChange Premier Support</div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div style="font-size:13px;color:var(--bc-gray-800);">24/7 UK-based support, phone-first — everyone you deal with is based in Leeds, not an offshore ticket queue.</div>
+        <div style="font-size:13px;color:var(--bc-gray-800);">Rates, price lists and contacts exported from Clik and imported directly, so the office isn't re-keying data for 34 users.</div>
+        <div style="font-size:13px;color:var(--bc-gray-800);">10 onboarding sessions, 24 hours of implementation time, BigChange University e-learning (28 modules) for new starters to learn in their own time, and a dedicated account manager throughout.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,var(--bc-dark),#0d2952);border-radius:var(--bc-radius);padding:36px;display:flex;align-items:start;gap:28px;" class="reveal">
+    <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--bc-blue),var(--bc-green));display:flex;align-items:center;justify-content:center;font-size:24px;">⭐</div>
+    <div style="flex:1;">
+      <div style="font-size:11px;font-weight:700;color:var(--bc-green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">BigChange Premier Support · £133/month</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#fff;margin-bottom:16px;">10 sessions, 24 hours of implementation, and a team that doesn't disappear once you're live.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;">
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ 10 onboarding sessions / 24 hours with your onboarding consultant</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ BigChange University — 28 modules across core, advanced and expert, each with a quiz</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ Dedicated account manager throughout your time at BigChange</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ Custom forms and worksheets built with you — no coding required to edit later</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ Clik data export & import — contacts, rates and price lists</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ 24/7 UK-based support, Leeds — engineers can call us from the app</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ Daily 11am workshops, plus monthly reviews with your account manager</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.7);">✓ Worksheets built for you first, then taught — so you can edit them yourselves</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="section" id="cases">
+  <div class="reveal">
+    <div class="section-tag">In Good Company</div>
+    <h2>Businesses making the same move, in your world.</h2>
+    <p class="subtitle">Sara — these are worth sharing with your MD alongside the proposal. Two are field service businesses on the reactive/project split you run, and one came from exactly the same starting point you're at now.</p>
+  </div>
+  <div class="case-grid">
+    <a href="https://www.youtube.com/watch?v=ZbH-FsGWAhc" target="_blank" rel="noreferrer" class="case-card reveal">
+      <div class="case-thumb" style="position:relative;">
+        <img src="https://img.youtube.com/vi/ZbH-FsGWAhc/maxresdefault.jpg" alt="Nirvana Maintenance" style="width:100%;height:100%;object-fit:cover;"/>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;"><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-left:15px solid #0A2240;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;"></div></div></div>
+        <div style="position:absolute;top:10px;right:10px;background:rgba(220,0,0,.9);color:#fff;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;">▶ Watch</div>
+      </div>
+      <div class="case-body">
+        <div class="sector">Property Maintenance · Joblogic → BigChange · 400% Growth</div>
+        <h4>Nirvana Maintenance — came from Joblogic, 400% growth ▶</h4>
+        <p>Property maintenance business that was exactly where you are now — evaluating Joblogic, fixed system, no real customisation. Made the switch to BigChange instead. 400% growth in turnover, 650% more jobs completed. MD Darren Waitson talks through the transition.</p>
+        <div class="read-more">Watch their story →</div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=VtWMHspNUXg" target="_blank" rel="noreferrer" class="case-card reveal">
+      <div class="case-thumb" style="position:relative;">
+        <img src="https://img.youtube.com/vi/VtWMHspNUXg/maxresdefault.jpg" alt="Pinnacle Group" style="width:100%;height:100%;object-fit:cover;"/>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;"><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-left:15px solid #0A2240;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;"></div></div></div>
+        <div style="position:absolute;top:10px;right:10px;background:rgba(220,0,0,.9);color:#fff;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;">▶ Watch</div>
+      </div>
+      <div class="case-body">
+        <div class="sector">Facilities Management · National · Reactive & Planned · Multi-site</div>
+        <h4>Pinnacle Group — national FM, reactive and planned in one system</h4>
+        <p>National FM business running the same reactive/planned split you do, across housing, schools and retail schemes. Since BigChange: real-time reporting, productivity gains, reduced costs and higher client satisfaction — feeding directly into contract extensions and new contract wins.</p>
+        <div class="read-more">Watch their story →</div>
+      </div>
+    </a>
+
+    <a href="https://www.bigchange.com/success-stories/gem-introduces-bigchanges-for-public-sector-contract-reporting" target="_blank" rel="noreferrer" class="case-card reveal">
+      <div class="case-thumb" style="position:relative;">
+        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/668ec5689f15ba5e89a06ab5_1200_bigchange_gem_03409.avif" alt="GEM Environmental" style="width:100%;height:100%;object-fit:cover;"/>
+        <div style="position:absolute;top:10px;right:10px;background:rgba(0,114,206,.9);color:#fff;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:700;">Read</div>
+      </div>
+      <div class="case-body">
+        <div class="sector">FM · Compliance · Client Portal · Audit Reporting</div>
+        <h4>GEM Environmental — compliance and client reporting done right</h4>
+        <p>Environmental services business using BigChange for compliance-driven contracts, with full client portal reporting — directly comparable to the customer-journey audit trail you're required to maintain for your insurers. "BigChange gives us a proven track record with well-documented evidence."</p>
+        <div class="read-more">Read their story →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<section class="section" id="pricing">
+  <div class="reveal">
+    <div class="section-tag">Pricing — indicative</div>
+    <h2>£1,221 a month for all 34 users — fixed for your full 36-month term.</h2>
+    <p class="subtitle">Your quote is on the table: one transparent rate for field and office users, vehicle tracking and installation included, the Sage 50 integration and the Lightning AI upgrade at no charge, and your support package covering implementation. Held for you until Friday 13 November, with the rate fixed for the full 36 months.</p>
+  </div>
+
+  <div class="grid-2 reveal" style="max-width:960px;">
+    <div class="price-box-dark">
+      <div style="font-size:10.5px;font-weight:700;color:var(--bc-green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;">Everything included in the per-user rate</div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:start;gap:12px;"><span style="color:var(--bc-green);font-size:16px;flex-shrink:0;line-height:1.3;">✓</span><div><div style="font-size:13px;font-weight:700;color:#fff;">Vehicle tracking — included, free installation</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:3px;">No separate subscription, no extra hardware cost</div></div></div>
+        <div style="display:flex;align-items:start;gap:12px;"><span style="color:var(--bc-green);font-size:16px;flex-shrink:0;line-height:1.3;">✓</span><div><div style="font-size:13px;font-weight:700;color:#fff;">Two-way Sage 50 integration — £0</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:3px;">Normally £125 a month — included free, purchasing and purchase invoices too</div></div></div>
+        <div style="display:flex;align-items:start;gap:12px;"><span style="color:var(--bc-green);font-size:16px;flex-shrink:0;line-height:1.3;">✓</span><div><div style="font-size:13px;font-weight:700;color:#fff;">Lightning AI upgrade — £0</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:3px;">JustAsk and the AI features you have seen, plus purchase invoice scanning, assets and worksheets — no add-ons, no credits</div></div></div>
+        <div style="display:flex;align-items:start;gap:12px;"><span style="color:var(--bc-green);font-size:16px;flex-shrink:0;line-height:1.3;">✓</span><div><div style="font-size:13px;font-weight:700;color:#fff;">£0 upfront</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:3px;">Monthly subscription. No setup fee</div></div></div>
+      </div>
+    </div>
+
+    <div class="price-box-main">
+      <div style="padding:16px 24px;background:linear-gradient(135deg,var(--bc-dark),#0d2952);">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--bc-green);">Green Man Environmental · 34 users</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-top:2px;">Your quote — held to Friday 13 November 2026, 36-month term</div>
+      </div>
+      <div style="padding:14px 22px;border-bottom:1px solid var(--bc-gray-100);display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13px;font-weight:600;color:var(--bc-dark);">19 field + 15 office = 34 user licences</div><div style="font-size:11px;color:var(--bc-gray-400);">£32 per user per month — 19 field (£608) and 15 office (£480)</div></div>
+        <div style="text-align:right;"><div style="font-size:13px;font-weight:700;color:var(--bc-blue);">£1,088/mo</div></div>
+      </div>
+      <div style="padding:14px 22px;border-bottom:1px solid var(--bc-gray-100);display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13px;font-weight:600;color:var(--bc-dark);">Premier Support</div><div style="font-size:11px;color:var(--bc-gray-400);">10 sessions · 24 hrs implementation · BigChange University</div></div>
+        <div style="font-size:13px;font-weight:700;color:var(--bc-blue);">£133/month</div>
+      </div>
+      <div style="padding:10px 22px;background:rgba(40,226,137,.03);border-bottom:1px solid rgba(40,226,137,.1);display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:12px;color:var(--bc-gray-600);">Vehicle tracking + installation (19 field engineers)</div>
+        <span style="background:rgba(40,226,137,.1);color:#1a8a5a;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">FREE</span>
+      </div>
+      <div style="padding:10px 22px;background:rgba(40,226,137,.03);border-bottom:1px solid rgba(40,226,137,.1);display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:12px;color:var(--bc-gray-600);">Upfront cost</div>
+        <span style="background:rgba(40,226,137,.1);color:#1a8a5a;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">£0</span>
+      </div>
+      <div style="padding:24px;text-align:center;background:linear-gradient(135deg,var(--bc-dark),#0d2952);">
+        <div style="font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;">Your total monthly (exc. VAT)</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:52px;color:var(--bc-green);line-height:1;">£1,221/mo</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px;">34 users × £32 + £133 Premier Support — £0 upfront, fixed for 36 months</div>
+        <div style="margin-top:12px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;">
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;color:rgba(255,255,255,.6);">£1,088</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;">34 users × £32/month</div></div>
+          <div style="color:rgba(255,255,255,.2);font-size:20px;display:flex;align-items:center;">+</div>
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;color:rgba(255,255,255,.6);">£133</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;">Premier Support</div></div>
+          <div style="color:rgba(255,255,255,.2);font-size:20px;display:flex;align-items:center;">=</div>
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;color:#fff;">£1,221/mo</div><div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;">total per month</div></div>
+        </div>
+      </div>
+      <div style="padding:16px 22px;text-align:center;border-top:1px solid var(--bc-gray-100);"><a href="https://landing.bigchange.com/fJT3jrmV8Yy" target="_blank" rel="noreferrer" style="display:inline-block;background:var(--bc-blue);color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;">View your formal quote →</a><div style="font-size:11px;color:var(--bc-gray-400);margin-top:8px;">£1,221/mo exc. VAT (£1,465.20 inc. VAT) · 36-month term</div></div>
+      <div style="padding:16px 22px;background:#fffbeb;border-top:1px solid #fde68a;">
+        <div style="font-size:12px;color:#92400e;line-height:1.65;">⏳ This pricing is held until Friday 13 November 2026. Confirm by then and the £32 rate, the free Sage 50 integration and the Lightning upgrade are all secured for your 36-month term. The rate is fixed for the term, subject to CPI only, and any increase at renewal is capped at 10% — so you know the cost through the whole term and beyond.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bc-white);padding:0;">
+  <div class="section" id="next">
+    <div class="reveal">
+      <div class="section-tag">Next Steps</div>
+      <h2>Two steps, and you are ready to decide with everything in front of you.</h2>
+      <p class="subtitle">Sara — your quote is ready and held until Friday 13 November, with the Sage 50 integration (normally £125 a month) and the Lightning upgrade included at no charge. You have your requirements list answered and a timesheet example. Two simple steps keep you ahead of that date.</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;">
+      <div class="step-card active-step">
+        <div class="step-num">This week</div>
+        <div class="step-title">Review your quote, requirements and timesheet</div>
+        <div class="step-body"><a href="https://landing.bigchange.com/fJT3jrmV8Yy" target="_blank" rel="noreferrer" style="color:var(--bc-blue);font-weight:700;">Your formal quote is ready to view →</a> Alongside your answered requirements list and the anonymised timesheet example we sent, so you and Paul can see every output.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Thursday 15 October, 9:00am</div>
+        <div class="step-title">Catch-up and review of next steps</div>
+        <div class="step-body">We pick up anything still outstanding and agree the timeline to confirm by 13 November, so your implementation can start straight away.</div>
+      </div>
+    </div>
+
+    <div class="contact-section reveal">
+      <div class="contact-avatar">MF</div>
+      <div>
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;">Matthew Fryer</h3>
+        <div style="font-size:13px;color:var(--bc-green);font-weight:600;margin-bottom:14px;">Account Executive — BigChange</div>
+        <div style="display:flex;gap:28px;flex-wrap:wrap;">
+          <span style="font-size:13px;color:rgba(255,255,255,.75);">📧 <a href="mailto:matthew.fryer@bigchange.com" style="color:rgba(255,255,255,.75);text-decoration:none;">matthew.fryer@bigchange.com</a></span>
+          <span style="font-size:13px;color:rgba(255,255,255,.75);">📞 <a href="tel:+447951081056" style="color:rgba(255,255,255,.75);text-decoration:none;">07951 081 056</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <img src="https://www.martinport.com/wp-content/uploads/2022/05/bigchange-logo.webp" alt="BigChange" style="height:22px;opacity:.35;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;"/>
+  This proposal was prepared exclusively for Green Man Environmental. Confidential.
+</div>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.feature-panel').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).style.display='block';btn.classList.add('active');
+}
+const obs=new IntersectionObserver(e=>{e.forEach((e,i)=>{e.isIntersecting&&(setTimeout(()=>e.target.classList.add('visible'),i*80),obs.unobserve(e.target))})},{threshold:.05});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20)});
+</script>
+</body>
+</html>
